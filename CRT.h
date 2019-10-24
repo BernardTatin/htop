@@ -59,7 +59,7 @@ typedef enum ColorSchemes_ {
 } ColorSchemes;
 
 typedef enum ColorElements_ {
-   RESET_COLOR,
+   RESET_COLOR = 0,
    DEFAULT_COLOR,
    FUNCTION_BAR,
    FUNCTION_KEY,
@@ -110,7 +110,7 @@ typedef enum ColorElements_ {
    CPU_NICE,
    CPU_NICE_TEXT,
    CPU_NORMAL,
-   CPU_KERNEL,
+   CPU_KKERNEL,
    CPU_IOWAIT,
    CPU_IRQ,
    CPU_SOFTIRQ,
@@ -142,7 +142,7 @@ extern int CRT_delay;
 
 int* CRT_colors;
 
-extern int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT];
+extern int CRT_colorSchemes[LAST_COLORSCHEME][(int)LAST_COLORELEMENT];
 
 extern int CRT_cursorX;
 
